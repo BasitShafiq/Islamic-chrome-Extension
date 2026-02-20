@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "1-Minute Deen — Islamic Reminder",
+  "version": "1.0.0",
+  "description": "A calm Islamic reminder with daily spiritual content from Qur'an and Riyad as-Salihin",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://api.alquran.cloud/*",
+    "https://api.aladhan.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+     "default_icon": {
+      "48": "icons/icons8-mosque-48.png",
+      "96": "icons/icons8-mosque-96.png"
+    },
+    "default_title": "1-Minute Deen"
+  },
+  "icons": {
+    "48": "icons/icons8-mosque-48.png",
+      "96": "icons/icons8-mosque-96.png"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://api.alquran.cloud https://api.aladhan.com"
+  }
+}

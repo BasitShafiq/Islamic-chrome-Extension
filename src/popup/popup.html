@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Minute Deen</title>
+  
+  <!-- Import Arabic fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Popup styles -->
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- App container -->
+  <div id="app">
+    <!-- Loading state shown initially -->
+    <div class="reminder-card">
+      <div class="reminder-content">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <p class="loading-text">Loading...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Panel (hidden by default) -->
+  <div id="settingsPanel" class="settings-panel hidden">
+    <h3>Settings</h3>
+    <label for="cityInput">City</label>
+    <input id="cityInput" type="text" placeholder="e.g. London">
+    <label for="countryInput">Country</label>
+    <input id="countryInput" type="text" placeholder="e.g. United Kingdom">
+    <div class="settings-actions">
+      <button id="saveLocationBtn">Save</button>
+      <button id="cancelLocationBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Settings toggle -->
+  <button id="openSettingsBtn" class="settings-toggle" title="Settings">⚙️</button>
+
+  <!-- Main application script -->
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

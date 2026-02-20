@@ -1,0 +1,501 @@
+/*
+ * 1-Minute Deen - Main Styles
+ * A calm, spiritual design with dark elegant palette
+ */
+
+/* CSS Variables for theming */
+:root {
+  --bg-primary: #0a0f0d;          /* Deep black-green background */
+  --bg-secondary: #111916;        /* Slightly lighter dark */
+  --bg-card: linear-gradient(145deg, #1a2420 0%, #0f1613 100%);
+  --bg-card-solid: #151d19;       /* Solid card background */
+  --text-primary: #e8ebe9;        /* Light text */
+  --text-secondary: #9aada3;      /* Muted sage text */
+  --text-arabic: #f0f4f2;         /* Bright Arabic text */
+  --accent-green: #4ecdc4;        /* Teal accent */
+  --accent-gold: #d4af37;         /* Rich gold */
+  --accent-emerald: #2ecc71;      /* Emerald green */
+  --border-light: rgba(78, 205, 196, 0.2);
+  --border-glow: rgba(78, 205, 196, 0.4);
+  --success: #2ecc71;             /* Success green */
+  --streak-flame: #f39c12;        /* Warm flame color */
+  --prayer-banner: linear-gradient(90deg, #1a4a3a 0%, #2d5a47 100%);
+  --shadow-soft: rgba(0, 0, 0, 0.3);
+  --shadow-glow: rgba(78, 205, 196, 0.15);
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(ellipse at 20% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(46, 204, 113, 0.04) 0%, transparent 70%);
+}
+
+/* Arabic font - using system fonts with Arabic support */
+.arabic-text {
+  font-family: 'Scheherazade New', 'Amiri', 'Traditional Arabic', 'Noto Naskh Arabic', serif;
+  direction: rtl;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2;
+  color: var(--text-arabic);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Prayer time banner - subtle notification */
+.prayer-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--prayer-banner);
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.prayer-banner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prayer-banner .prayer-icon {
+  margin-right: 8px;
+}
+
+/* Main card container */
+.reminder-card {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 52px 60px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 
+    0 4px 30px var(--shadow-soft),
+    0 0 60px var(--shadow-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(20px);
+}
+
+/* Decorative corner accents */
+.reminder-card::before {
+  content: '✦';
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  opacity: 0.6;
+}
+
+/* Streak indicator */
+.streak-indicator {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--streak-flame);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 20px var(--streak-flame);
+}
+
+.streak-indicator.visible {
+  opacity: 1;
+}
+
+.streak-indicator .flame {
+  font-size: 1.1rem;
+}
+
+/* Actionable message title */
+.reminder-title {
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  margin-bottom: 28px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Main content text (Arabic/Translation) */
+.reminder-content {
+  margin-bottom: 32px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.reminder-text {
+  transition: opacity 0.2s ease;
+}
+
+.reminder-text.english,
+.reminder-text.urdu {
+  font-size: 1.4rem;
+  line-height: 1.9;
+  color: var(--text-primary);
+  direction: ltr;
+  text-align: center;
+}
+
+.reminder-text.urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+  direction: rtl;
+  font-size: 1.55rem;
+  line-height: 2.1;
+}
+
+/* Reference text */
+.reminder-reference {
+  font-size: 0.9rem;
+  color: var(--accent-green);
+  font-weight: 500;
+  margin-bottom: 36px;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+/* Translation toggle buttons */
+.translation-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 11px 26px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.toggle-btn:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  background: rgba(78, 205, 196, 0.1);
+  box-shadow: 0 0 20px rgba(78, 205, 196, 0.15);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, var(--accent-green) 0%, #3dbdb5 100%);
+  border-color: var(--accent-green);
+  color: #0a0f0d;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(78, 205, 196, 0.3);
+}
+
+/* Done button */
+.done-btn {
+  background: transparent;
+  border: 2px solid var(--success);
+  color: var(--success);
+  padding: 15px 36px;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.done-btn:hover {
+  background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.35);
+  border-color: transparent;
+}
+
+.done-btn.completed {
+  background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+  color: white;
+  cursor: default;
+  transform: none;
+  border-color: transparent;
+  box-shadow: 0 0 30px rgba(46, 204, 113, 0.25);
+}
+
+.done-btn.completed:hover {
+  transform: none;
+  box-shadow: 0 0 30px rgba(46, 204, 113, 0.25);
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(78, 205, 196, 0.2);
+  border-top-color: var(--accent-green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Error state */
+.error-message {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 20px;
+}
+
+/* Completed View - Minimal display after task completion */
+.completed-view {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.completed-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 0 0 40px rgba(46, 204, 113, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(46, 204, 113, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(46, 204, 113, 0.5); }
+}
+
+.completed-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.completed-streak {
+  font-size: 1.1rem;
+  color: var(--streak-flame);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.completed-streak .flame {
+  font-size: 1.3rem;
+}
+
+.completed-message {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 24px;
+  opacity: 0.8;
+}
+
+/* Hidden utility class */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .reminder-card {
+    padding: 40px 28px;
+    border-radius: 20px;
+  }
+
+  .reminder-card::before {
+    top: 16px;
+    left: 20px;
+    font-size: 1rem;
+  }
+
+  .arabic-text {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+
+  .reminder-text.english,
+  .reminder-text.urdu {
+    font-size: 1.15rem;
+  }
+
+  .translation-toggle {
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    padding: 9px 20px;
+    font-size: 0.85rem;
+  }
+
+  .streak-indicator {
+    top: 16px;
+    right: 18px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .reminder-card {
+    padding: 28px 20px;
+  }
+
+  .arabic-text {
+    font-size: 1.4rem;
+  }
+
+  .reminder-title {
+    font-size: 0.8rem;
+  }
+
+  .done-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .completed-view {
+    padding: 40px 20px;
+  }
+
+  .completed-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .completed-title {
+    font-size: 1.2rem;
+  }
+
+  .completed-streak {
+    font-size: 1rem;
+  }
+}
+
+/* Smooth fade animations */
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated background stars */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(78, 205, 196, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(212, 175, 55, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.15), transparent),
+    radial-gradient(2px 2px at 130px 80px, rgba(78, 205, 196, 0.2), transparent),
+    radial-gradient(1px 1px at 160px 120px, rgba(212, 175, 55, 0.15), transparent);
+  background-size: 200px 200px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 0.6; }
+}
+
+/* Decorative Islamic geometric pattern overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, transparent 40%, rgba(78, 205, 196, 0.02) 50%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
