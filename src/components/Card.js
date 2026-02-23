@@ -3,6 +3,9 @@
  * Main UI component displaying the daily reminder
  */
 
+// Store current reminder data for audio playback
+let currentReminder = null;
+
 /**
  * Create the reminder card HTML structure
  * @returns {HTMLElement}
@@ -11,11 +14,20 @@ export function createCardElement() {
   const card = document.createElement('div');
   card.className = 'reminder-card fade-in';
   card.innerHTML = `
+    <!-- Decorative top bar -->
+    <div class="card-decoration"></div>
+    
     <!-- Streak Indicator -->
     <div class="streak-indicator" id="streakIndicator">
       <span class="flame">🔥</span>
       <span class="streak-count" id="streakCount">0</span>
       <span class="streak-label">days</span>
+    </div>
+
+    <!-- Content Type Badge -->
+    <div class="content-type-badge" id="contentTypeBadge">
+      <span class="badge-icon">📖</span>
+      <span class="badge-text">Loading...</span>
     </div>
 
     <!-- Actionable Title -->
@@ -33,9 +45,17 @@ export function createCardElement() {
 
     <!-- Translation Toggle -->
     <div class="translation-toggle" id="translationToggle">
-      <button class="toggle-btn active" data-lang="arabic">Arabic</button>
+      <button class="toggle-btn active" data-lang="arabic">العربية</button>
       <button class="toggle-btn" data-lang="english">English</button>
-      <button class="toggle-btn" data-lang="urdu">Urdu</button>
+      <button class="toggle-btn" data-lang="urdu">اردو</button>
+    </div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+      <button class="audio-btn" id="audioBtn">
+        <span class="audio-icon">🔊</span>
+        <span class="audio-text">Listen</span>
+      </button>
     </div>
 
     <!-- Done Button -->
@@ -53,11 +73,37 @@ export function createCardElement() {
  * @param {Object} reminder - Reminder object with translations
  */
 export function updateCardContent(reminder) {
+  // Store reminder for audio playback
+  currentReminder = reminder;
+  
   document.getElementById('reminderTitle').textContent = reminder.title;
   document.getElementById('textArabic').textContent = reminder.arabic;
   document.getElementById('textEnglish').textContent = reminder.english;
   document.getElementById('textUrdu').textContent = reminder.urdu;
   document.getElementById('reminderReference').textContent = reminder.reference;
+  
+  // Update content type badge
+  const badge = document.getElementById('contentTypeBadge');
+  const badgeIcon = badge.querySelector('.badge-icon');
+  const badgeText = badge.querySelector('.badge-text');
+  
+  if (reminder.type === 'quran') {
+    badge.className = 'content-type-badge quran';
+    badgeIcon.textContent = '📖';
+    badgeText.textContent = 'Quran';
+  } else {
+    badge.className = 'content-type-badge hadith';
+    badgeIcon.textContent = '📜';
+    badgeText.textContent = 'Hadith';
+  }
+}
+
+/**
+ * Get current reminder data (for audio playback)
+ * @returns {Object|null}
+ */
+export function getCurrentReminder() {
+  return currentReminder;
 }
 
 /**

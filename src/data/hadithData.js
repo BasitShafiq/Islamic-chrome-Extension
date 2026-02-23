@@ -1,6 +1,6 @@
 /**
  * Hadith Data
- * Static collection of hadiths from Riyad as-Salihin
+ * Expanded collection of hadiths from Riyad as-Salihin, Bukhari, Muslim
  * Selected for brevity, impact, and actionability
  */
 
@@ -252,5 +252,246 @@ export const HADITH_COLLECTION = [
     urdu: "علم حاصل کرنا ہر مسلمان پر فرض ہے۔",
     reference: "Riyad as-Salihin 1384",
     title: "Learn something new about Islam"
+  },
+  // New additions below
+  {
+    number: 401,
+    arabic: "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ صَدَقَةٌ",
+    english: "Your smile for your brother is charity.",
+    urdu: "اپنے بھائی کے سامنے مسکرانا صدقہ ہے۔",
+    reference: "Jami' at-Tirmidhi 1956",
+    title: "Spread joy with your smile"
+  },
+  {
+    number: 402,
+    arabic: "لَا تَغْضَبْ وَلَكَ الجَنَّةُ",
+    english: "Do not get angry and Paradise will be yours.",
+    urdu: "غصہ نہ کرو تو جنت تمہاری ہے۔",
+    reference: "Sahih al-Bukhari 6116",
+    title: "Control your anger today"
+  },
+  {
+    number: 403,
+    arabic: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الجَمَالَ",
+    english: "Verily, Allah is beautiful and He loves beauty.",
+    urdu: "بے شک اللہ خوبصورت ہے اور خوبصورتی کو پسند کرتا ہے۔",
+    reference: "Sahih Muslim 91",
+    title: "Appreciate beauty in creation"
+  },
+  {
+    number: 404,
+    arabic: "مَنْ لَا يَرْحَمُ لَا يُرْحَمُ",
+    english: "He who does not show mercy will not be shown mercy.",
+    urdu: "جو رحم نہیں کرتا اس پر رحم نہیں کیا جائے گا۔",
+    reference: "Sahih al-Bukhari 5997",
+    title: "Show mercy to all creatures"
+  },
+  {
+    number: 405,
+    arabic: "الدُّنْيَا سِجْنُ المُؤْمِنِ وَجَنَّةُ الكَافِرِ",
+    english: "The world is a prison for the believer and a paradise for the disbeliever.",
+    urdu: "دنیا مومن کے لیے قید خانہ ہے اور کافر کے لیے جنت ہے۔",
+    reference: "Sahih Muslim 2956",
+    title: "Remember the true home is the Hereafter"
+  },
+  {
+    number: 406,
+    arabic: "خَيْرُ الصَّدَقَةِ أَنْ يَتَصَدَّقَ المَرْءُ وَهُوَ صَحِيحٌ شَحِيحٌ",
+    english: "The best charity is that which is given when you are healthy and greedy.",
+    urdu: "بہترین صدقہ وہ ہے جو تندرستی اور لالچ کی حالت میں دیا جائے۔",
+    reference: "Sahih al-Bukhari 1419",
+    title: "Give charity while you can"
+  },
+  {
+    number: 407,
+    arabic: "كُنْ فِي الدُّنْيَا كَأَنَّكَ غَرِيبٌ أَوْ عَابِرُ سَبِيلٍ",
+    english: "Be in this world as if you were a stranger or a traveler.",
+    urdu: "دنیا میں ایسے رہو جیسے تم مسافر یا اجنبی ہو۔",
+    reference: "Sahih al-Bukhari 6416",
+    title: "Live simply, focus on Akhirah"
+  },
+  {
+    number: 408,
+    arabic: "مَنْ صَمَتَ نَجَا",
+    english: "Whoever remains silent is saved.",
+    urdu: "جو خاموش رہا وہ نجات پا گیا۔",
+    reference: "Jami' at-Tirmidhi 2501",
+    title: "Embrace beneficial silence"
+  },
+  {
+    number: 409,
+    arabic: "أَفْضَلُ الصَّدَقَةِ سَقْيُ المَاءِ",
+    english: "The best charity is giving water to drink.",
+    urdu: "سب سے افضل صدقہ پانی پلانا ہے۔",
+    reference: "Sunan Abu Dawud 1681",
+    title: "Provide water to the thirsty"
+  },
+  {
+    number: 410,
+    arabic: "إِذَا مَاتَ الإِنْسَانُ انْقَطَعَ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ: صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ",
+    english: "When a person dies, his deeds end except for three: ongoing charity, beneficial knowledge, or a righteous child who prays for him.",
+    urdu: "جب انسان مر جاتا ہے تو اس کے اعمال ختم ہو جاتے ہیں سوائے تین کے: صدقہ جاریہ، فائدہ مند علم، یا نیک اولاد جو اس کے لیے دعا کرے۔",
+    reference: "Sahih Muslim 1631",
+    title: "Invest in lasting good deeds"
+  },
+  {
+    number: 411,
+    arabic: "يَسِّرُوا وَلَا تُعَسِّرُوا",
+    english: "Make things easy and do not make them difficult.",
+    urdu: "آسانی کرو اور مشکل نہ کرو۔",
+    reference: "Sahih al-Bukhari 69",
+    title: "Make life easy for others"
+  },
+  {
+    number: 412,
+    arabic: "الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ",
+    english: "Those who show mercy will be shown mercy by the Most Merciful.",
+    urdu: "رحم کرنے والوں پر رحمان رحم کرتا ہے۔",
+    reference: "Jami' at-Tirmidhi 1924",
+    title: "Be merciful to earn mercy"
+  },
+  {
+    number: 413,
+    arabic: "أَكْمَلُ المُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا",
+    english: "The most complete believer in faith is the one with the best character.",
+    urdu: "ایمان میں سب سے کامل وہ ہے جس کا اخلاق سب سے اچھا ہو۔",
+    reference: "Jami' at-Tirmidhi 1162",
+    title: "Perfect your character"
+  },
+  {
+    number: 414,
+    arabic: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ",
+    english: "The best of people are those who are most beneficial to people.",
+    urdu: "لوگوں میں سب سے بہتر وہ ہے جو لوگوں کو سب سے زیادہ فائدہ پہنچائے۔",
+    reference: "Sahih al-Jami 3289",
+    title: "Be of service to humanity"
+  },
+  {
+    number: 415,
+    arabic: "الحَمْدُ لِلَّهِ تَمْلَأُ المِيزَانَ",
+    english: "Saying 'Alhamdulillah' fills the scale of good deeds.",
+    urdu: "الحمد للہ کہنا میزان کو بھر دیتا ہے۔",
+    reference: "Sahih Muslim 223",
+    title: "Say Alhamdulillah frequently"
+  },
+  {
+    number: 416,
+    arabic: "مَنْ تَوَاضَعَ لِلَّهِ رَفَعَهُ اللهُ",
+    english: "Whoever humbles himself for Allah, Allah will elevate him.",
+    urdu: "جو اللہ کے لیے عاجزی کرے اللہ اسے بلند کرے گا۔",
+    reference: "Sahih Muslim 2588",
+    title: "Practice humility today"
+  },
+  {
+    number: 417,
+    arabic: "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+    english: "O Allah, help me to remember You, to thank You, and to worship You beautifully.",
+    urdu: "اے اللہ، مجھے اپنا ذکر کرنے، شکر ادا کرنے اور اچھی عبادت کرنے میں مدد فرما۔",
+    reference: "Sunan Abu Dawud 1522",
+    title: "Make this beautiful dua today"
+  },
+  {
+    number: 418,
+    arabic: "مَنْ أَصْبَحَ مِنْكُمْ آمِنًا فِي سِرْبِهِ، مُعَافًى فِي جَسَدِهِ، عِنْدَهُ قُوتُ يَوْمِهِ، فَكَأَنَّمَا حِيزَتْ لَهُ الدُّنْيَا",
+    english: "Whoever wakes up safe in his home, healthy in body, with food for the day, it is as if he has been given the whole world.",
+    urdu: "جو صبح کو اپنے گھر میں امن سے ہو، جسم صحت مند ہو، اور دن کا کھانا ہو، گویا اسے پوری دنیا مل گئی۔",
+    reference: "Jami' at-Tirmidhi 2346",
+    title: "Be grateful for basic blessings"
+  },
+  {
+    number: 419,
+    arabic: "لَيَأْتِيَنَّ عَلَى النَّاسِ زَمَانٌ لَا يُبَالِي المَرْءُ بِمَا أَخَذَ المَالَ أَمِنْ حَلَالٍ أَمْ مِنْ حَرَامٍ",
+    english: "A time will come when people will not care whether they get money from halal or haram sources.",
+    urdu: "لوگوں پر ایسا وقت آئے گا جب انہیں پرواہ نہیں ہوگی کہ مال حلال سے آیا یا حرام سے۔",
+    reference: "Sahih al-Bukhari 2059",
+    title: "Earn from halal sources only"
+  },
+  {
+    number: 420,
+    arabic: "مَا أَكَلَ أَحَدٌ طَعَامًا قَطُّ خَيْرًا مِنْ أَنْ يَأْكُلَ مِنْ عَمَلِ يَدِهِ",
+    english: "No one has ever eaten better food than what he earns from the work of his own hands.",
+    urdu: "کسی نے اپنے ہاتھ کی کمائی سے بہتر کوئی کھانا نہیں کھایا۔",
+    reference: "Sahih al-Bukhari 2072",
+    title: "Work hard and earn honestly"
+  },
+  {
+    number: 421,
+    arabic: "إِنَّ اللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلًا أَنْ يُتْقِنَهُ",
+    english: "Allah loves that when you do something, you do it with excellence.",
+    urdu: "اللہ پسند کرتا ہے کہ جب تم کوئی کام کرو تو اسے بہترین طریقے سے کرو۔",
+    reference: "Bayhaqi 4/334",
+    title: "Pursue excellence in all you do"
+  },
+  {
+    number: 422,
+    arabic: "لِيَأْخُذْ أَحَدُكُمْ حَبْلَهُ فَيَحْتَطِبَ خَيْرٌ لَهُ مِنْ أَنْ يَسْأَلَ النَّاسَ",
+    english: "It is better for one of you to take a rope and gather firewood than to beg from people.",
+    urdu: "تم میں سے کوئی رسی لے کر لکڑیاں جمع کرے یہ لوگوں سے مانگنے سے بہتر ہے۔",
+    reference: "Sahih al-Bukhari 1471",
+    title: "Be self-sufficient and dignified"
+  },
+  {
+    number: 423,
+    arabic: "مَنْ دَعَا إِلَى هُدًى كَانَ لَهُ مِنَ الأَجْرِ مِثْلُ أُجُورِ مَنْ تَبِعَهُ",
+    english: "Whoever calls to guidance will have a reward equal to those who follow him.",
+    urdu: "جو ہدایت کی طرف بلائے اسے اتنا ثواب ملے گا جتنا اس کی پیروی کرنے والوں کو۔",
+    reference: "Sahih Muslim 2674",
+    title: "Guide others to goodness"
+  },
+  {
+    number: 424,
+    arabic: "مَنْ عَادَى لِي وَلِيًّا فَقَدْ آذَنْتُهُ بِالحَرْبِ",
+    english: "Whoever shows hostility to My friend, I declare war against him.",
+    urdu: "جو میرے ولی سے دشمنی کرے میں اس سے اعلان جنگ کرتا ہوں۔",
+    reference: "Sahih al-Bukhari 6502",
+    title: "Respect the righteous servants of Allah"
+  },
+  {
+    number: 425,
+    arabic: "بَادِرُوا بِالأَعْمَالِ فِتَنًا كَقِطَعِ اللَّيْلِ المُظْلِمِ",
+    english: "Rush to do good deeds before trials come like pieces of a dark night.",
+    urdu: "اندھیری رات کے ٹکڑوں جیسے فتنوں سے پہلے نیک اعمال کی طرف دوڑو۔",
+    reference: "Sahih Muslim 118",
+    title: "Do good deeds before it's too late"
+  },
+  {
+    number: 426,
+    arabic: "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+    english: "None of you truly believes until he loves for his brother what he loves for himself.",
+    urdu: "تم میں سے کوئی مومن نہیں جب تک اپنے بھائی کے لیے وہی پسند نہ کرے جو اپنے لیے کرتا ہے۔",
+    reference: "Sahih al-Bukhari 13",
+    title: "Wish good for others as for yourself"
+  },
+  {
+    number: 427,
+    arabic: "مَنْ سَتَرَ مُسْلِمًا سَتَرَهُ اللهُ يَوْمَ القِيَامَةِ",
+    english: "Whoever conceals the faults of a Muslim, Allah will conceal his faults on the Day of Resurrection.",
+    urdu: "جو کسی مسلمان کی پردہ پوشی کرے اللہ قیامت کے دن اس کی پردہ پوشی کرے گا۔",
+    reference: "Sahih al-Bukhari 2442",
+    title: "Protect others' honor and dignity"
+  },
+  {
+    number: 428,
+    arabic: "مَنْ نَفَّسَ عَنْ مُؤْمِنٍ كُرْبَةً مِنْ كُرَبِ الدُّنْيَا نَفَّسَ اللهُ عَنْهُ كُرْبَةً مِنْ كُرَبِ يَوْمِ القِيَامَةِ",
+    english: "Whoever relieves a believer's distress in this world, Allah will relieve his distress on the Day of Resurrection.",
+    urdu: "جو کسی مومن کی دنیاوی پریشانی دور کرے اللہ اس کی قیامت کی پریشانی دور کرے گا۔",
+    reference: "Sahih Muslim 2699",
+    title: "Help relieve others' hardships"
+  },
+  {
+    number: 429,
+    arabic: "إِنَّ اللَّهَ لَا يَظْلِمُ مِثْقَالَ ذَرَّةٍ",
+    english: "Indeed, Allah does not wrong anyone even by an atom's weight.",
+    urdu: "بے شک اللہ ذرہ برابر بھی ظلم نہیں کرتا۔",
+    reference: "Surah An-Nisa 4:40",
+    title: "Trust in Allah's perfect justice"
+  },
+  {
+    number: 430,
+    arabic: "كُلُّ نَفْسٍ ذَائِقَةُ المَوْتِ",
+    english: "Every soul will taste death.",
+    urdu: "ہر نفس موت کا ذائقہ چکھے گا۔",
+    reference: "Surah Aal-Imran 3:185",
+    title: "Prepare for the inevitable journey"
   }
 ];
