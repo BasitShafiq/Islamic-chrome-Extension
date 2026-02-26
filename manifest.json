@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "1-Minute Deen — Islamic Reminder",
-  "version": "1.0.0",
+  "name": "Daily Quran Hadith",
+  "version": "2.0.0",
   "description": "A calm Islamic reminder with daily spiritual content from Qur'an and Riyad as-Salihin",
   "permissions": [
     "storage",
@@ -17,7 +17,7 @@
       "48": "icons/icons8-mosque-48.png",
       "96": "icons/icons8-mosque-96.png"
     },
-    "default_title": "1-Minute Deen"
+    "default_title": "Daily Quran Hadith"
   },
   "icons": {
     "48": "icons/icons8-mosque-48.png",
